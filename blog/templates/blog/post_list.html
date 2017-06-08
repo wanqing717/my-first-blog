@@ -1,24 +1,18 @@
 <html>
-	<head>
-		<title>yujiayan's blog</title>
-	</head>
-	<body>
-	    <div>
-	    	<h1><a href="">django blog</a></h1>
-	    </div>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+    <div>
+        <h1><a href="/">Django Girls Blog</a></h1>
+    </div>
 
-	    <div>
-	    	<p>
-	    		published:14.06.2017, 13:14
-	    	</p>
-	    	<h2><a href="">my first post</a></h2>
-	    	<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis v</p>
-	    </div>
-
-	    <div>
-	    	<p>published:14.06.2017,12:14</p>
-	    	<h2><a href="">my second post</a></h2>
-	    	<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis v</p>
-	    </div>
-	</body>
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+    </body>
 </html>
