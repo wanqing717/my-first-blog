@@ -6,7 +6,7 @@ from django.conf import settings
 from django.db import migrations, models
 import django.db.models.deletion
 import django.utils.timezone
-
+#we tell django that we add the change of models into db
 
 class Migration(migrations.Migration):
 
